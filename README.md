@@ -11,8 +11,7 @@ This is possible via [GraalVM's JavaScript engine](https://medium.com/graalvm/gr
 The wrapper library should work with on the JVM with JDK11+ with by adding the following `:jvm-opts`:
 
 ```
-["-XX:+UnlockExperimentalVMOptions"
- "-XX:+EnableJVMCI"]
+["-XX:+UnlockExperimentalVMOptions" "-XX:+EnableJVMCI"]
 ```
 
 ```clojure
