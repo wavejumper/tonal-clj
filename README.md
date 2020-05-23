@@ -1,3 +1,5 @@
+[![Clojars Project](https://img.shields.io/clojars/v/wavejumper/tonal.svg)](https://clojars.org/wavejumper/tonal)
+
 # tonal-clj
 
 Clojure wrapper library into the excellent [tonal](https://github.com/tonaljs/tonal) JavaScript library.
@@ -7,6 +9,8 @@ Clojure wrapper library into the excellent [tonal](https://github.com/tonaljs/to
 This is possible via [GraalVM's JavaScript engine](https://medium.com/graalvm/graalvms-javascript-engine-on-jdk11-with-high-performance-3e79f968a819)
 
 # Usage
+
+
 
 The wrapper library should work with on the JVM with JDK11+ with by adding the following `:jvm-opts`:
 
