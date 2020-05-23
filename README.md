@@ -2,7 +2,7 @@
 
 # tonal-clj
 
-Clojure wrapper library into the excellent [tonal](https://github.com/tonaljs/tonal) JavaScript library.
+Clojure wrapper library into the excellent [tonal](https://github.com/tonaljs/tonal) JavaScript library for the JVM.
 
 > tonal is a music theory library. Contains functions to manipulate tonal elements of music (note, intervals, chords, scales, modes, keys). It deals with abstractions (not actual music or sound).
 
