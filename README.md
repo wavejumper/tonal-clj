@@ -25,3 +25,5 @@ The wrapper library should work with on the JVM with JDK11+ with by adding the f
 ;; => 261.6255653005986
 ```
 
+
+Refer to the [tonal documentation](https://github.com/tonaljs/tonal#documentation) for more information.
