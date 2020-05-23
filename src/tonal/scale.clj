@@ -1,7 +1,7 @@
 (ns tonal.scale
   "https://github.com/tonaljs/tonal/tree/master/packages/scale"
   (:refer-clojure :exclude [get reduced])
-  (:require [interop :as interop]))
+  (:require [tonal.interop :as interop]))
 
 (def ^:private members
   [:names
@@ -14,7 +14,7 @@
 
 (def ^:private api
   (delay
-   (interop/build-api (interop/Tonal) :Scale members)))
+   (interop/import (interop/Tonal) :Scale members)))
 
 (defn- execute [path & args]
   (apply interop/execute @api path args))

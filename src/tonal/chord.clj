@@ -14,7 +14,7 @@
 
 (def ^:private api
   (delay
-   (interop/build-api (interop/Tonal) :Chord members)))
+   (interop/import (interop/Tonal) :Chord members)))
 
 (defn- execute [path & args]
   (apply interop/execute @api path args))

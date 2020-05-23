@@ -10,7 +10,7 @@
 
 (def ^:private api
   (delay
-   (interop/build-api (interop/Tonal) :Midi members)))
+   (interop/import (interop/Tonal) :Midi members)))
 
 (defn- execute [path & args]
   (apply interop/execute @api path args))

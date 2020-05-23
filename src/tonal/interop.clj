@@ -1,4 +1,5 @@
 (ns tonal.interop
+  (:refer-clojure :exclude [import])
   (:require [clojure.java.io :as io])
   (:import (org.graalvm.polyglot Context Source Value)
            (org.graalvm.polyglot.proxy ProxyArray ProxyObject)))
@@ -24,7 +25,7 @@
         bindings (.getBindings ctx "js")]
     (.getMember bindings "Tonal")))
 
-(defn build-api
+(defn import
   [^Value tonal api-name members]
   (let [member (.getMember tonal (name api-name))]
     (into {}
