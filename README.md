@@ -1,4 +1,6 @@
 [![Clojars Project](https://img.shields.io/clojars/v/wavejumper/tonal.svg)](https://clojars.org/wavejumper/tonal)
+[![CircleCI](https://circleci.com/gh/wavejumper/tonal-clj.svg?style=svg)](https://circleci.com/gh/wavejumper/tonal-clj)
+
 
 # tonal-clj
 
