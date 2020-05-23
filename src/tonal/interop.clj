@@ -20,6 +20,10 @@
      (.eval ctx src)
      ctx)))
 
+(defn warmup! []
+  (deref js)
+  true)
+
 (defn ^Value Tonal []
   (let [ctx      ^Context @js
         bindings (.getBindings ctx "js")]
