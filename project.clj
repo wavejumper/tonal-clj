@@ -15,6 +15,9 @@
 
   :resource-paths
   ["resources"]
+  
+  :jvm-opts
+  ["-XX:+UnlockExperimentalVMOptions" "-XX:+EnableJVMCI"]
 
   :source-paths
   ["src"])
