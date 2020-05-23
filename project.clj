@@ -13,6 +13,9 @@
   :compile-path
   "target"
 
+  :test-paths
+  ["test"]
+
   :resource-paths
   ["resources"]
   
