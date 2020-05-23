@@ -21,8 +21,11 @@ The wrapper library should work with on the JVM with JDK11+ with by adding the f
 ```clojure
 (require '[tonal.midi :as midi])
 
-(midi/midi-to-freq 60)
+(time (midi/midi-to-freq 60))
+
+;; "Elapsed time: 0.573886 msecs"
 ;; => 261.6255653005986
+
 ```
 
 
