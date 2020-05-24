@@ -12,6 +12,8 @@ This is possible via [GraalVM's JavaScript engine](https://github.com/wavejumper
 
 # Usage
 
+Requires JDK11+ or a graalvm runtime
+
 ```clojure
 ["-XX:+UnlockExperimentalVMOptions" "-XX:+EnableJVMCI"]
 ```
