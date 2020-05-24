@@ -1,4 +1,4 @@
-(defproject wavejumper/tonal "3.6.5-2"
+(defproject wavejumper/tonal "3.6.5-3"
   :description "Clojure API into the JavaScript tonal library"
   :url "https://github.com/wavejumper/tonal-clj"
 
