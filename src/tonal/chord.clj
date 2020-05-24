@@ -1,7 +1,9 @@
 (ns tonal.chord
   "https://github.com/tonaljs/tonal/tree/master/packages/chord"
   (:refer-clojure :exclude [get reduced])
-  (:require [tonal.interop :as interop]))
+  (:require [tonal.interop :as interop]
+            [clj-polyglot.core :as poly]
+            [clj-polyglot.js :as poly-js]))
 
 (def ^:private members
   [:getChord
@@ -14,10 +16,10 @@
 
 (def ^:private api
   (delay
-   (interop/import (interop/Tonal) :Chord members)))
+   (poly-js/import @interop/Tonal :Chord members)))
 
 (defn- execute [path & args]
-  (apply interop/execute @api path args))
+  (apply poly/eval @api path args))
 
 (defn get-chord
   ([type]
@@ -25,24 +27,24 @@
   ([type tonic]
    (get-chord type tonic nil))
   ([type tonic root]
-   (execute [:getChord] type tonic root)))
+   (execute :getChord type tonic root)))
 
 (defn get [name]
-  (execute [:get] name))
+  (execute :get name))
 
 (defn detect [notes]
-  (execute [:detect] notes))
+  (execute :detect notes))
 
 (defn transpose
   [chord-name interval-name]
-  (execute [:transpose] chord-name interval-name))
+  (execute :transpose chord-name interval-name))
 
 (defn chord-scales
   [chord-name]
-  (execute [:chord-scales] chord-name))
+  (execute :chord-scales chord-name))
 
 (defn extended [chord]
-  (execute [:extended] chord))
+  (execute :extended chord))
 
 (defn reduced [chord]
-  (execute [:reduced] chord))
+  (execute :reduced chord))

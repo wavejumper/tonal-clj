@@ -1,6 +1,8 @@
 (ns tonal.midi
   "https://github.com/tonaljs/tonal/tree/master/packages/midi"
-  (:require [tonal.interop :as interop]))
+  (:require [tonal.interop :as interop]
+            [clj-polyglot.js :as poly-js]
+            [clj-polyglot.core :as poly]))
 
 (def ^:private members
   [:toMidi
@@ -10,24 +12,24 @@
 
 (def ^:private api
   (delay
-   (interop/import (interop/Tonal) :Midi members)))
+   (poly-js/import @interop/Tonal :Midi members)))
 
 (defn- execute [path & args]
-  (apply interop/execute @api path args))
+  (apply poly/eval @api path args))
 
 (defn to-midi [note]
-  (execute [:toMidi] note))
+  (execute :toMidi note))
 
 (defn midi-to-freq
   ([note]
    (midi-to-freq note 440))
   ([note tuning]
-   (execute [:midiToFreq] note tuning)))
+   (execute :midiToFreq note tuning)))
 
 (defn midi-to-note-name
   [midi]
-  (execute [:midiToNoteName] midi))
+  (execute :midiToNoteName midi))
 
 (defn freq-to-midi
   [freq]
-  (execute [:freqToMidi] freq))
+  (execute :freqToMidi freq))
