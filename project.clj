@@ -4,7 +4,6 @@
 
   :dependencies
   [[org.clojure/clojure "1.10.1"]
-   [org.graalvm.sdk/graal-sdk "20.0.0"]
    [org.graalvm.js/js "20.0.0"]
    [org.graalvm.js/js-scriptengine "20.0.0"]]
 

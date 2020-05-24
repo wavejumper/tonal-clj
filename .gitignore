@@ -7,3 +7,4 @@ target/
 *.xml.asc
 .nrepl-port
 pom.xml
+.lein-failures
